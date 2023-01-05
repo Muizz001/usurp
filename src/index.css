@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slidedown {
+  position: relative;
+  animation: slidedown 1.5s ease-in-out;
+}
+
+.bt-gradient {
+  background: linear-gradient(
+    35deg,
+    rgba(143, 5, 227, 1) 0%,
+    rgba(6, 131, 255, 1) 100%
+  );
+}
+
+.text-gradient {
+  background: linear-gradient(
+    35deg,
+    rgba(143, 5, 227, 1) 0%,
+    rgba(6, 131, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/Poppins-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.slideinright {
+  animation: slideinright 2s ease-in-out;
+}
+
+.slideinleft {
+  animation: slideinleft 1s linear;
+}
+
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+  90% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slideinleft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slideinright {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
